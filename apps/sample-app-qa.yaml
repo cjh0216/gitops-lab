@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app-qa
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjh0216/gitops-lab.git
+    targetRevision: HEAD
+    path: overlays/qa
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: qa
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
