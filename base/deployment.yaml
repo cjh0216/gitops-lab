@@ -17,7 +17,7 @@ spec:
       containers:
         - name: sample-app
           image: sample-app:v1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
