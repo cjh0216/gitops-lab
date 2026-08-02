@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: sample-app
-          image: sample-app:v1
+          image: ghcr.io/cjh0216/sample-app:f15efac1453c330bec52a7c149b3193ad77630d2
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
